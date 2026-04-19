@@ -1,0 +1,185 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+    String pageClass = request.getParameter("pageClass");
+    String headerClass = "header" + (pageClass != null ? " " + pageClass : "");
+%>
+
+<div class="<%= headerClass %>">
+	<!-- LEFT -->
+	<a href="#" class="logo"> <svg width="102" height="32"
+			viewBox="0 0 3490 1080" style="display: block">
+          <path
+				d="M1494.71 456.953C1458.28 412.178 1408.46 389.892 1349.68 389.892C1233.51 389.892 1146.18 481.906 1146.18 605.892C1146.18 729.877 1233.51 821.892 1349.68 821.892C1408.46 821.892 1458.28 799.605 1494.71 754.83L1500.95 810.195H1589.84V401.588H1500.95L1494.71 456.953ZM1369.18 736.895C1295.33 736.895 1242.08 683.41 1242.08 605.892C1242.08 528.373 1295.33 474.888 1369.18 474.888C1443.02 474.888 1495.49 529.153 1495.49 605.892C1495.49 682.63 1443.8 736.895 1369.18 736.895ZM1656.11 810.195H1750.46V401.588H1656.11V810.195ZM948.912 666.715C875.618 506.859 795.308 344.664 713.438 184.809C698.623 155.177 670.554 98.2527 645.603 67.8412C609.736 24.1733 556.715 0.779785 502.915 0.779785C449.115 0.779785 396.094 24.1733 360.227 67.8412C335.277 98.2527 307.207 155.177 292.392 184.809C210.522 344.664 130.212 506.859 56.9187 666.715C47.5621 687.769 24.9504 737.675 16.3736 760.289C6.2373 787.581 0.779297 817.213 0.779297 846.845C0.779297 975.509 101.362 1079.22 235.473 1079.22C346.193 1079.22 434.3 1008.26 502.915 934.18C571.53 1008.26 659.638 1079.22 770.357 1079.22C904.468 1079.22 1005.83 975.509 1005.83 846.845C1005.83 817.213 999.593 787.581 989.457 760.289C980.88 737.675 958.268 687.769 948.912 666.715ZM502.915 810.195C447.555 738.455 396.094 649.56 396.094 577.819C396.094 506.079 446.776 470.209 502.915 470.209C559.055 470.209 610.516 508.419 610.516 577.819C610.516 647.22 558.275 738.455 502.915 810.195ZM770.357 998.902C688.362 998.902 618.032 941.557 555.741 872.656C619.966 792.541 690.826 679.121 690.826 577.819C690.826 458.513 598.04 389.892 502.915 389.892C407.79 389.892 315.784 458.513 315.784 577.819C315.784 679.098 386.145 792.478 450.144 872.593C387.845 941.526 317.491 998.902 235.473 998.902C146.586 998.902 81.0898 931.061 81.0898 846.845C81.0898 826.57 84.2087 807.856 91.2261 788.361C98.2436 770.426 120.855 720.52 130.212 701.025C203.505 541.17 282.256 380.534 364.126 220.679C378.941 191.047 403.891 141.921 422.605 119.307C442.877 94.3538 470.947 81.0975 502.915 81.0975C534.883 81.0975 562.953 94.3538 583.226 119.307C601.939 141.921 626.89 191.047 641.704 220.679C723.574 380.534 802.325 541.17 875.618 701.025C884.975 720.52 907.587 770.426 914.604 788.361C921.622 807.856 925.52 826.57 925.52 846.845C925.52 931.061 859.244 998.902 770.357 998.902ZM3285.71 389.892C3226.91 389.892 3175.97 413.098 3139.91 456.953V226.917H3045.56V810.195H3134.45L3140.69 754.83C3177.12 799.605 3226.94 821.892 3285.71 821.892C3401.89 821.892 3489.22 729.877 3489.22 605.892C3489.22 481.906 3401.89 389.892 3285.71 389.892ZM3266.22 736.895C3191.6 736.895 3139.91 682.63 3139.91 605.892C3139.91 529.153 3191.6 474.888 3266.22 474.888C3340.85 474.888 3393.32 528.373 3393.32 605.892C3393.32 683.41 3340.07 736.895 3266.22 736.895ZM2827.24 389.892C2766.15 389.892 2723.56 418.182 2699.37 456.953L2693.13 401.588H2604.24V810.195H2698.59V573.921C2698.59 516.217 2741.47 474.888 2800.73 474.888C2856.87 474.888 2888.84 513.097 2888.84 578.599V810.195H2983.19V566.903C2983.19 457.733 2923.15 389.892 2827.24 389.892ZM1911.86 460.072L1905.62 401.588H1816.73V810.195H1911.08V604.332C1911.08 532.592 1954.74 486.585 2027.26 486.585C2042.85 486.585 2058.44 488.144 2070.92 492.043V401.588C2059.22 396.91 2044.41 395.35 2028.04 395.35C1978.58 395.35 1936.66 421.177 1911.86 460.072ZM2353.96 389.892C2295.15 389.892 2244.21 413.098 2208.15 456.953V226.917H2113.8V810.195H2202.69L2208.93 754.83C2245.36 799.605 2295.18 821.892 2353.96 821.892C2470.13 821.892 2557.46 729.877 2557.46 605.892C2557.46 481.906 2470.13 389.892 2353.96 389.892ZM2334.46 736.895C2259.84 736.895 2208.15 682.63 2208.15 605.892C2208.15 529.153 2259.84 474.888 2334.46 474.888C2409.09 474.888 2461.56 528.373 2461.56 605.892C2461.56 683.41 2408.31 736.895 2334.46 736.895ZM1703.28 226.917C1669.48 226.917 1642.08 254.326 1642.08 288.13C1642.08 321.934 1669.48 349.343 1703.28 349.343C1737.09 349.343 1764.49 321.934 1764.49 288.13C1764.49 254.326 1737.09 226.917 1703.28 226.917Z"
+				fill="currentcolor"></path>
+        </svg>
+	</a>
+
+	<!-- CENTER NAV -->
+
+	<div class="nav-center">
+		<!-- HOMES -->
+		<div class="tab active" onclick="selectTab(this)">
+			<div class="video-wrapper">
+				<video class="idle" autoplay muted playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/house-twirl.webm" />
+				</video>
+				<video class="selected" autoplay muted playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/house-selected.webm" />
+				</video>
+			</div>
+			<span style="margin-left: 15px">Homes</span>
+		</div>
+
+		<!-- EXPERIENCES -->
+		<div class="tab" onclick="selectTab(this)">
+			<div class="video-wrapper">
+				<video class="idle" autoplay muted loop playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/balloon-twirl.webm" />
+				</video>
+				<video class="selected" autoplay muted loop playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/balloon-selected.webm" />
+				</video>
+				<span class="badge"> NEW </span>
+			</div>
+			<span>Experiences</span>
+		</div>
+
+		<!-- SERVICES -->
+		<div class="tab" onclick="selectTab(this)">
+			<div class="video-wrapper">
+				<video class="idle" autoplay muted loop playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/consierge-twirl.webm" />
+				</video>
+				<video class="selected" autoplay muted loop playsinline>
+					<source
+						src="https://a0.muscache.com/videos/search-bar-icons/webm/consierge-selected.webm" />
+				</video>
+				<span class="badge">NEW</span>
+			</div>
+			<span>Services</span>
+		</div>
+	</div>
+	<!-- ================= TOP SEARCH ================= -->
+	<div class="top-search-wrapper">
+		<div class="top-search-bar">
+			<div class="top-search-item">
+				<img
+					src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240"
+					alt="" /> <small>Anywhere</small>
+			</div>
+
+			<div class="top-divider"></div>
+
+			<div class="top-search-item">
+				<small>Any week</small>
+			</div>
+
+			<div class="top-divider"></div>
+
+			<div class="top-search-item" style="padding-right: 60px">
+				<small>Add guests</small>
+				<div class="top-search-btn">
+					<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+						style="display: block; fill: none; height: 16px; width: 16px; stroke: currentColor; stroke-width: 4; overflow: visible;"
+						aria-hidden="true" role="presentation" focusable="false">
+                <path d="m20.666 20.666 10 10"></path>
+                <path
+							d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z"
+							fill="none"></path>
+              </svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- RIGHT -->
+	<div class="header-right">
+		<span class="host">Become a host</span>
+		<div class="icon-btn">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+				aria-hidden="true" role="presentation" focusable="false"
+				style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+            <path
+					d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.95 8.5h-3.9c.15 2.9 1.17 5.34 1.88 5.5H8c.68 0 1.72-2.37 1.93-5.23zm4.26 0h-2.76c-.09 1.96-.53 3.78-1.18 5.08A6.26 6.26 0 0 0 14.17 9zm-9.67 0H1.8a6.26 6.26 0 0 0 3.94 5.08 12.59 12.59 0 0 1-1.16-4.7l-.03-.38zm1.2-6.58-.12.05a6.26 6.26 0 0 0-3.83 5.03h2.75c.09-1.83.48-3.54 1.06-4.81zm2.25-.42c-.7 0-1.78 2.51-1.94 5.5h3.9c-.15-2.9-1.18-5.34-1.89-5.5h-.07zm2.28.43.03.05a12.95 12.95 0 0 1 1.15 5.02h2.75a6.28 6.28 0 0 0-3.93-5.07z"></path>
+          </svg>
+		</div>
+		<div class="menu-btn" onclick="toggleMenu()">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+				aria-hidden="true" role="presentation" focusable="false"
+				style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+            <g fill="none">
+				<path d="M2 16h28M2 24h28M2 8h28"></path></g>
+          </svg>
+			<div class="menu-card hidden">
+				<div class="menu-item help">
+					<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+						aria-hidden="true" role="presentation" focusable="false"
+						style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                <path
+							d="m8 0c4.4183 0 8 3.58172 8 8 0 4.4183-3.5817 8-8 8-4.41828 0-8-3.5817-8-8 0-4.41828 3.58172-8 8-8zm0 1.5c-3.58985 0-6.5 2.91015-6.5 6.5 0 3.5899 2.91015 6.5 6.5 6.5 3.5899 0 6.5-2.9101 6.5-6.5 0-3.58985-2.9101-6.5-6.5-6.5zm0 9.25c.55229 0 1 .4477 1 1s-.44771 1-1 1c-.55228 0-1-.4477-1-1s.44772-1 1-1zm.06473-7.58398c1.52426 0 2.97397 1.05548 2.97397 2.83411 0 1.65987-1.22457 2.54665-2.28686 2.96686l-.00274 1.03511-1.49999-.00395.00567-2.14403.55088-.15046c.98777-.26979 1.73306-.83193 1.73306-1.70353 0-.78691-.60484-1.33411-1.47399-1.33411-.71208 0-1.32461.47156-1.52734 1.17921l-1.44199-.41312c.37855-1.32132 1.55747-2.26609 2.96933-2.26609z"></path>
+              </svg>
+					<span>Help Center</span>
+				</div>
+
+				<hr />
+
+				<div class="menu-item host">
+					<div class="text">
+						<strong>Become a host</strong>
+						<p>It's easy to start hosting and earn extra income.</p>
+					</div>
+					<img
+						src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-UserProfile/original/5347d650-16de-4f5a-a38e-79edc988befa.png?im_w=240"
+						alt="host" />
+				</div>
+
+				<hr />
+
+				<div class="menu-item">Refer a Host</div>
+				<div class="menu-item">Find a co-host</div>
+				<div class="menu-item">Gift cards</div>
+
+				<hr />
+
+				<div class="menu-item">Log in or sign up</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ================= SEARCH ================= -->
+	<div class="search-wrapper">
+		<div class="search-bar">
+			<div class="search-item">
+				<small>Where</small> <span>Search destinations</span>
+			</div>
+
+			<div class="divider"></div>
+
+			<div class="search-item">
+				<small>When</small> <span>Add dates</span>
+			</div>
+
+			<div class="divider"></div>
+
+			<div class="search-item">
+				<small>Who</small> <span>Add guests</span>
+				<div class="search-btn">
+					<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+						style="display: block; fill: none; height: 16px; width: 16px; stroke: currentColor; stroke-width: 4; overflow: visible;"
+						aria-hidden="true" role="presentation" focusable="false">
+                <path d="m20.666 20.666 10 10"></path>
+                <path
+							d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z"
+							fill="none"></path>
+              </svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
