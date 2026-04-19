@@ -2,6 +2,10 @@
 
 A simple Airbnb-inspired web app built with Java, JSP, Servlets, JSTL, HTML, CSS, and vanilla JavaScript. The project showcases a homepage with room cards, a room detail page, and a working dropdown menu in the header.
 
+## Live Demo
+
+- [View the live demo](https://jpmaduka-airbnb-clone-demo.hf.space)
+
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Tomcat](https://img.shields.io/badge/Tomcat-10.1-orange)
 ![JSP](https://img.shields.io/badge/JSP-Servlets-green)
